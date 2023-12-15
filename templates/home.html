@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>{% block head %}
+	{% endblock %}
+	<style type="text/css">
+
+
+
+	li{
+		list-style-type: none;
+		display: inline;
+		text-align: center;
+		padding:20px;
+		font-size: 20px;
+		margin-left: 100px;
+
+
+
+
+
+	}
+
+
+	ul{background-color:rgb(50,104,167);
+		padding: 10px;
+
+
+		margin-right: -10px;
+		margin-left: -10px;
+		font-size: 80%;
+
+
+
+
+
+	}
+	.jkl{   /*background-image: url("abcd.jpg.jpg");
+*/
+
+			/*width: 200px;
+			height: 10px;*/
+			/*padding: 20px;*/
+			background-position:center;
+			background-repeat: no-repeat;
+			background-size: 40%;
+			margin-top: 100px;
+			opacity: 0.6;
+
+
+
+		}
+
+	a{
+		text-decoration-line: none;
+		color: white;
+		padding: 10px;
+
+
+	}
+	a:hover{
+		background-color:rgb(102,142,167);
+
+		}
+
+
+
+
+
+
+</style>
+	<title></title>
+
+</head>
+<body>
+
+	<div class="hjj">
+	<ul>
+		<li><a href="{% url 'home' %}">Home</a></li>
+		<li ><a href="{% url 'about' %}">About</a></li>
+
+		<li><a href="{% url 'login' %}">Login</a></li>
+		<li><a href="{% url 'registration' %}">Registration</a></li>
+
+		<li><a href="{% url 'courses' %}">Courses</a></li>
+
+
+	</ul>
+		{% block content %}
+		{% endblock %}
+
+</div>
+	{% block image %}
+<div class="jkl" align="center"><img src="{% static 'image/abcd.jpg' %}"></div>
+{% endblock %}
+
+
+</body>
+</html>

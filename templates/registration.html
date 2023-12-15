@@ -1,0 +1,76 @@
+{% extends 'home.html' %}
+{% block image %}
+{% endblock %}
+
+<html>
+<head>
+    {% block head %}
+<title>
+	REGISTRARTION FORM </title>
+</head>
+{% endblock %}
+<body style="text-align: center;">
+{% block content%}
+	<h1 style="text-decoration-line:underline;text-decoration-style: solid;"><i>REGISTRATION FORM</i></h1>
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+
+<label for="USERNAME">
+ USERNAME:
+<input type="text" name="USERNAME" id="USERNAME">
+</label><p></p>
+<label for="FIRSTNAME">
+ FIRSTNAME:
+<input type="text" name="FIRSTNAME" id="FIRSTNAME">
+</label><p></p>
+<label for="LASTNAME">
+LASTNAME :
+<input type="text" name="LASTNAME" id="LASTNAME">
+</label><p></p>
+
+	<label for="PASSWORD">
+ PASSWORD:
+<input type="password" name="PASSWORD" id="PASSWORD">
+</label><p></p>
+	<label for="CONFIRM_PASSWORD">
+ CONFIRM_PASSWORD:
+<input type="password" name="CONFIRM_PASSWORD" id="CONFIRM_PASSWORD">
+</label><p></p>
+<label for="DATE OF BIRTH">
+DATE OF BIRTH:
+<input type="date" name="DATE OF BIRTH" id="DATE OF BIRTH">
+</label><p></p>
+<label for="EMAIL">
+EMAIL :
+<input type="email" name="email" id="email">
+</label><p></p>
+<label>
+MOBILE NUMBER:
+<input type="tel" name="phone" id="phone" placeholder="0123456789" pattern="[0-9]{10}">
+</label><p></p>
+
+		<label for="gender">choose a gender:</label>
+		<select name="gender" id="gender">
+		<option value="male">Male</option>
+		<option value="female">Female</option>
+		</select>
+
+
+<label >
+CITY :
+<input type="text" name="city" id="city">
+</label><p></p>
+<label >
+COUNTRY:
+<input type="text" name="country" id="country">
+</label><p></p>
+
+
+<label >file
+<input type="file" name="file" value="file"></label><p></p>
+<input type="submit" name="submit" value="submit">
+</form>
+{% endblock %}
+
+</body>
+</html>
